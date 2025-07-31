@@ -73,7 +73,7 @@ class ImageAnalyzer:
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": f"以下是多张图片的分析描述，请根据这些描述回答（回答的结果为：4,5，表示第四张、第五张的意思；若没有匹配的结果返回0）：{question}\n\n"}
+                    {"type": "text", "text": f"以下是多张图片的分析描述，请根据这些描述回答（结果只输出符合条件的图片编号，用逗号分隔，例如图片1、图片2符合要求，输出：'1,2'；如果没有符合条件的图片，输出'0'。不要添加任何额外解释。）：{question}\n\n"}
                 ],
             }
         ]
@@ -104,14 +104,14 @@ class ImageAnalyzer:
 if __name__ == '__main__':
     analyzer = ImageAnalyzer(config.DASHSCOPE_API_KEY)
 
-    analyzer.analyze_image("deduplicator/9grid_output/grid_00.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_01.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_02.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_10.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_11.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_12.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_20.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_21.jpg")
-    analyzer.analyze_image("deduplicator/9grid_output/grid_22.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_00.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_01.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_02.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_10.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_11.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_12.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_20.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_21.jpg")
+    analyzer.analyze_image("utils/9grid_output/grid_22.jpg")
 
     print(analyzer.analyze_descriptions("哪些事物或者动物能在公园里看到"))
