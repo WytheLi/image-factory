@@ -2,3 +2,19 @@
 - aHash (Average Hash - 平均哈希)
 - dHash (Difference Hash - 差异哈希)
 - pHash (Perceptual Hash - 感知哈希)
+
+图片验证
+1. 分割9宫格图片
+2. Qwen-VL视觉理解分析图片
+3. AI分析问题答案
+4. 自动化工具模拟点击
+
+Example:
+
+```html
+
+<video controls width="100%">
+    <source src="resources/example/demo-video.mkv" type="video/mkv">
+    您的浏览器不支持视频播放
+</video>
+```
