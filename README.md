@@ -10,11 +10,7 @@
 4. 自动化工具模拟点击
 
 Example:
-
-```html
-
 <video controls width="100%">
     <source src="resources/example/demo-video.mkv" type="video/mkv">
     您的浏览器不支持视频播放
 </video>
-```
